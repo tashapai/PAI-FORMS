@@ -293,7 +293,8 @@ div.btn-group.bootstrap-select.show-tick.form-control {margin: 8px 0 8px 0;}
 
 #container div.ng-scope div div label {height:auto;clear:none;padding: 15px 0 0 0;width:189px;}
 #container div.ng-scope div div input[readonly]{background:#f6f6f6;font-weight:bolder;}
-#container div.ng-scope label input{margin: -12px 12px 0 0;text-align:right;}
+#container div.ng-scope label input{margin:-12px 12px 0 0;text-align:right;}
+#container div.ng-scope div.checkarea {margin: 0 0 10px 0;}
 
 
 /* ============================================================
