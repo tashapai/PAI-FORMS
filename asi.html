@@ -26,30 +26,17 @@
 </head>
 <body>
 
-
-
-
 	<section id="container">
-
 		<header>
-
-			<span id="logo">
-				<img src="http://originalpenguinaccessories.com/form/separations/images/logo.png" id="logo" name="logo" alt="PAi Logo">
-             
-			</span>
-
+			<span id="logo"><img src="http://originalpenguinaccessories.com/form/separations/images/logo.png" id="logo" name="logo" alt="PAi Logo"></span>
 			<h1>ASI Artpack</h1>
-
 		</header>
 
-		<mark id="message"></mark>
-
-		<form method="post" action="classes/contact.php" name="containerform" id="containerform" autocomplete="on" class="form-horizontal" role="form">
+		<form method="post" action="" name="containerform" id="containerform" autocomplete="on" class="form-horizontal" role="form">
 
 			<fieldset>
 
 				<legend>Account Information</legend>
-
 
 				<div class="half">
 					<label for="customer_name" accesskey="U">Customer Name</label>
@@ -137,7 +124,6 @@
 					</div>
 				</div>
 
-
 			</fieldset>
 
 			<fieldset>
@@ -169,87 +155,79 @@
 				</div> -->
 
 				<div ng-app>
-
-					
 					<label for="package_type" accesskey="P">Package Type<br><small>(enter quantity)</small></label>
 					<div class="checkarea">
-							<div>
-								<label>
-								<input ng-model="domestic" type="number">Domestic</label>
-							</div>
-							<div>
-								<label>
-								<input ng-model="q30" type="number"">Q30</label>
-							</div>
-							<div>
-								<label>
-								<input ng-model="c60" type="number">C60</label>
-							</div>
-							<div>
-								<label>
-								<input ng-model="full_custom" type="number"">Full Custom</label>
-							</div>
-							<div>
-								<label>
-								<input ng-model="core_24" type="number">Core 24</label>
-							</div>
+						<div>
+							<label>
+							<input ng-model="domestic" type="number">Domestic</label>
+						</div>
 
-							<div>
-								<label style="font-weight:bold"><input type="number" value="{{ domestic + q30 + c60 + full_custom + core_24 }}" readonly disabled>Total Designs</label>
-							
-							</div>
+						<div>
+							<label>
+							<input ng-model="q30" type="number"">Q30</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="c60" type="number">C60</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="full_custom" type="number"">Full Custom</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="core_24" type="number">Core 24</label>
+						</div>
+
+						<div>
+							<label style="font-weight:bold"><input type="number" value="{{ domestic + q30 + c60 + full_custom + core_24 }}" readonly disabled>Total Designs</label>
+						</div>
 					</div>
-
-
-
-
 				</div>
-
-
-
-
-
 
 				<div>
 					<label for="style_preference" accesskey="Y">Style Preference <br><small>(select all that apply)</small></label>
-						<div class="checkarea">
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="golf_resort"/><span>Golf/Resort</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="corporate"/><span>Corporate</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="camo_outdoor"/><span>Camo/Outdoor</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="extreme"/><span>Extreme</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="performance"/><span>Performance</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="winter_knit"/><span>Winter/Knit</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="distressed"/><span>Distressed</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="trucker"/><span>Trucker</span></label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input name="style_preference[]" type="checkbox" id="Other"/><span>Other</span></label>
-							</div>
+					<div class="checkarea">
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="golf_resort"/><span>Golf/Resort</span></label>
 						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="corporate"/><span>Corporate</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="camo_outdoor"/><span>Camo/Outdoor</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="extreme"/><span>Extreme</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="performance"/><span>Performance</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="winter_knit"/><span>Winter/Knit</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="distressed"/><span>Distressed</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="trucker"/><span>Trucker</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="Other"/><span>Other</span></label>
+						</div>
+					</div>
 				</div>
 
 				<div class="half">
@@ -276,25 +254,6 @@
 	</section>
 
 	<script>
-	  $(document).ready(function () {
-	    var mySelect = $('#first-disabled2');
-
-	    $('#special').on('click', function () {
-	      mySelect.find('option:selected').prop('disabled', true);
-	      mySelect.selectpicker('refresh');
-	    });
-
-	    $('#special2').on('click', function () {
-	      mySelect.find('option:disabled').prop('disabled', false);
-	      mySelect.selectpicker('refresh');
-	    });
-
-	    $('#basic2').selectpicker({
-	      liveSearch: true,
-	      maxOptions: 1;
-	    });
-	  });
-
 	// sort list
 	var my_options = $("#csr_name option");
 	my_options.sort(function(a,b) {
@@ -303,7 +262,6 @@
 	    else return 0
 	})
 	$("#csr_name").empty().append(my_options);
-
 	// run chosen plugin
 	$("#csr_name").chosen({no_results_text: "No results matched"});
 
@@ -323,8 +281,7 @@
         $(this).find('.glyphicon').toggleClass('glyphicon-check glyphicon-unchecked');
         console.log( $(this).find('input').is(':checked') );
     }
-});
-
+	});
 	</script>
 
 

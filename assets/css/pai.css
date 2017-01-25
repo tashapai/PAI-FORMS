@@ -37,21 +37,6 @@ body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min
 
 /* Form style */
 
-mark.validate {
-	display: inline;
-    float:right;
-	margin: 12px 0 0 10px;
-	width: 16px;
-	height: 16px;
-	background: transparent none;
-}
-mark.valid {
-	background: url(../img/success.gif) no-repeat top left;
-}
-mark.error {
-	background: url(../img/error.gif) no-repeat top left;
-}
-
 #container label {
 	display: inline-block;
 	float: left;
@@ -68,8 +53,6 @@ mark.error {
 	font-size: 0.75em;
 	color: #ccc;
 }
-
-
 
 #container input, #container textarea, #container select {
 	width: 210px;
@@ -201,6 +184,8 @@ mark.error {
 
 #container input[type="checkbox"]:focus {transition: all 0.25s ease-in-out;-webkit-transition: all 0.25s ease-in-out;-moz-transition: all 0.25s ease-in-out;box-shadow: 0 0 5px rgba(120, 164, 47, 0);-webkit-box-shadow: 0 0 5px rgba(120, 164, 47, 0);-moz-box-shadow: 0 0 5px rgba(120, 164, 47, 0);
 }
+
+#container input.form-control {font-size:1em;}
 
 .dropdown-menu>li>a:hover { 
     background-color: #f6f6f6;
