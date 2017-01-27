@@ -256,6 +256,12 @@ input[type="checkbox"]:checked + span:before {
     padding: 0;
 }
 
+#container .checkbox2 label, .radio label {
+    padding-left: 0px;
+    width:110px;
+    padding: 0;
+}
+
 
 #container .checkarea {width:590px; display:inline-block; float:left; margin:0 0 10px 0;}
 #container .checkarea div {float:left;}
