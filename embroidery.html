@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>ASI Artpack</title>
+<title>Embroidery Request</title>
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
@@ -30,7 +30,7 @@
 	<section id="container">
 		<header>
 			<span id="logo"><img src="http://originalpenguinaccessories.com/form/separations/images/logo.png" id="logo" name="logo" alt="PAi Logo"></span>
-			<h1>Embroidery</h1>
+			<h1>Embroidery Request</h1>
 		</header>
 
 		<form method="post" action="" name="embroideryForm" id="embroideryForm" autocomplete="on" class="form-horizontal" role="form">
@@ -125,56 +125,112 @@
 					</div>
 				</div>
 
+        <div class="half">
+          <label for="po" accesskey="P">PO#</label>
+          <input name="po" type="text" id="po">
+        </div>
+
+        <div class="half">
+          <label for="ship_to" accesskey="I">Ship To</label>
+          <input name="ship_to" type="text" id="ship_to">
+        </div>
+
+        <div>
+          <label for="address" accesskey="D">Address</label>
+          <div>
+            <input name="address" type="text" id="address" style="width:588px;">
+          </div>
+        </div>
+
 			</fieldset>
 
 
+      <fieldset>
+        <legend>Tape Details</legend>
+        <!--begin tape entries-->
+        <div id="tape1" class="clonedInput1">
 
-          <!--begin tape entries-->
-          <div id="entry1" class="clonedInput"><fieldset>
-            <legend id="reference" name="reference" class="heading-reference">Entry #1</legend>
-            <div class="half">
-              <label for="tape_number">Tape Number</label>
-              <input id="tape_number" name="tape_number" type="text" placeholder="" required="">
-            </div>
+          <div class="half">
+            <label for="tape_number">Tape Number</label>
+            <input id="tape_number" name="tape_number" type="text">
+          </div>
 
-            <div class="half">
-              <label for="tape_name">Tape Name</label>
-              <input id="tape_name" name="tape_name" type="text" placeholder="" required="">
-            </div>
+          <div class="half">
+            <label for="tape_name">Tape Name</label>
+            <input id="tape_name" name="tape_name" type="text">
+          </div>
 
-            <div class="form_group">
-              <label for="embroidery_location" accesskey="Y">Location <br><small>(select all that apply)</small></label>
-              <div class="checkarea">
-                <div class="checkbox2">
-                  <label>
-                  <input name="embroidery_location[]" type="checkbox" id="front"/><span>Front</span></label>
-                </div>
-                <div class="checkbox2">
-                  <label>
-                  <input name="embroidery_location[]" type="checkbox" id="left_side"/><span>Left</span></label>
-                </div>
-                <div class="checkbox2">
-                  <label>
-                  <input name="embroidery_location[]" type="checkbox" id="right_side"/><span>Right</span></label>
-                </div>
-                <div class="checkbox2">
-                  <label>
-                  <input name="embroidery_location[]" type="checkbox" id="back"/><span>Back</span></label>
-                </div>
-                <div class="checkbox2">
-                  <label>
-                  <input name="embroidery_location[]" type="checkbox" id="backstrap"/><span>Backstrap</span></label>
-                </div>
+          <div class="form_group">
+            <label for="embroidery_location" accesskey="Y">Location <br><small>(select all that apply)</small></label>
+            <div class="checkarea">
+              <div class="checkbox2">
+                <label>
+                <input name="embroidery_location[]" type="checkbox" id="front"/><span>Front</span></label>
+              </div>
+              <div class="checkbox2">
+                <label>
+                <input name="embroidery_location[]" type="checkbox" id="left_side"/><span>Left</span></label>
+              </div>
+              <div class="checkbox2">
+                <label>
+                <input name="embroidery_location[]" type="checkbox" id="right_side"/><span>Right</span></label>
+              </div>
+              <div class="checkbox2">
+                <label>
+                <input name="embroidery_location[]" type="checkbox" id="back"/><span>Back</span></label>
+              </div>
+              <div class="checkbox2">
+                <label>
+                <input name="embroidery_location[]" type="checkbox" id="backstrap"/><span>Backstrap</span></label>
               </div>
             </div>
-</fieldset>
-
-            </div><!-- end #entry1 -->
+          </div>
+         </div><!-- end #entry1 -->
         <!-- Button (Double) -->
-        <p align="right">
-        <button type="button" id="btnAdd" name="btnAdd" class="glyphicon glyphicon-plus"></button>
-        <button type="button" id="btnDel" name="btnDel" class="glyphicon glyphicon-minus"></button>
-        </p>
+        <div class="adddel">
+        <button type="button" id="btnAddTape" name="btnAddTape" class="glyphicon glyphicon-plus"></button>
+        <button type="button" id="btnDelTape" name="btnDelTape" class="glyphicon glyphicon-minus"></button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sample Details</legend>
+        <!--begin tape entries-->
+        <div id="sample1" class="clonedInput2">
+          <div class="half">
+            <label for="sample_number">Sample Number</label>
+            <input id="sample_number" name="sample_number" type="text" placeholder="" required="">
+          </div>
+
+          <div class="half">
+            <label for="sample_qty">Sample Quantity</label>
+            <input id="sample_qty" name="sample_qty" type="text" placeholder="" required="">
+          </div>
+
+          <div class="half">
+            <label for="cap_and_color">Cap Style<br><small>(include color code)</small></label>
+            <input id="cap_and_color" name="cap_and_color" type="text" placeholder="" required="">
+          </div>
+
+          <div class="half">
+            <label for="sample_price">Price</label>
+            <input id="sample_price" name="sample_price" type="text" placeholder="" required="">
+          </div>
+
+          <div>
+          <label for="sample_comments" accesskey="C">Comments</label>
+          <textarea name="sample_comments" cols="40" rows="4" id="sample_comments" placeholder="Enter your comments" spellcheck="true" required=""></textarea>
+        </div>
+
+         </div><!-- end #entry1 -->
+        <!-- Button (Double) -->
+        <div class="adddel">
+        <button type="button" id="btnAddSample" name="btnAddSample" class="glyphicon glyphicon-plus"></button>
+        <button type="button" id="btnDelSample" name="btnDelSample" class="glyphicon glyphicon-minus"></button>
+        </div>
+      </fieldset>
+
+
 
 
 

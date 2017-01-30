@@ -4,6 +4,8 @@ html, body { border: 0; margin: 0; padding: 0; }
 body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min-width: 100%; min-height: 101%; color: #666; background:#eee; }
 
 
+
+
 /* END Remove This */
 
 #logo {
@@ -16,7 +18,13 @@ body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min
 #container p, label, legend { font: 1.5em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; }
 
 #container h1 { margin: -30px 0 15px; font-size: 24px; color: #333333; display: block; font-weight:bold; }
-#container hr { color: inherit; height: 0; margin: 6px 0 6px 0; padding: 0; border: 1px solid #d9d9d9; border-style: none none solid; }
+
+#container hr {
+  height: 1px;
+  background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+  border: 0;
+  float:left;
+}
 
 #container {
 	display: block;
@@ -83,7 +91,7 @@ body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min
 }
 
 #container textarea {
-	width: 600px;
+	width: 588px;
     resize:vertical;
     max-height: 800px;
 }
@@ -192,20 +200,36 @@ body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min
     color:#333;
     outline: none;
     position: relative;
-    z-index: 5;}
+    z-index: 5;
+    cursor:default;}
 
 .dropdown-menu>li>a:focus { 
     background-color: #fff;
     color:#333;
     outline: none;
     position: relative;
-    z-index: 5;}
+    z-index: 5;
+    cursor:default;}
 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
     background-color:#78a42f;
+    cursor: default;
 }
 
+.btn-default{color:#666;cursor:default;}
+div.adddel {margin:10px 20px 0 0;float:right;}
+div.btn-group.bootstrap-select.show-tick.form-control {margin: 8px 0 8px 0;}
 span.glyphicon.glyphicon-ok.check-mark {color:#78a42f;}
+button.glyphicon.glyphicon-plus {color:#78a42f;padding:3px;vertical-align:center;font-size:15px;transition:all .2s ease-in-out;cursor:default;outline:0px;border:0px;background:none;}
+button.glyphicon.glyphicon-minus {color:#d40000;padding:3px;vertical-align:center;font-size:15px;transition:all .2s ease-in-out;cursor:default;outline:0px;border:0px;background:none;}
+button[disabled] {display: none;}
+button:active,button:focus,{background:#fff;outline:0px;}
+button:hover.glyphicon.glyphicon-plus{transform:scale(1.5);}
+button:hover.glyphicon.glyphicon-minus{transform:scale(1.5);}
+
+
+#tape2,#tape3,#tape4,#sample2,#sample3,#sample4,#sample5,#sample6{margin-top:30px;padding-top:20px;border-top:1px solid #eee;}
+.clonedInput1,.clonedInput2 {float:left;width:100%;}
 
 
 /* ========== Custom styles for radio and checkbox =============== */
@@ -291,10 +315,6 @@ input[type=number]::-webkit-inner-spin-button {
 #container label.radio {float:left;}
 
 acronym { border-bottom:1px dotted #ccc; }
-
-
-div.btn-group.bootstrap-select.show-tick.form-control {margin: 8px 0 8px 0;}
-.btn-default{color:#666;}
 
 
 #container div.ng-scope div div label {height:auto;clear:none;padding: 15px 0 0 0;width:189px;}
