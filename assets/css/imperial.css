@@ -11,8 +11,8 @@ body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min
 #logo {
     position: relative;
     top: 0px;
-    left: 350px;
-    width:100px;
+    left: 310px;
+    width:180px;
 }
 
 #container p, label, legend { font: 1.5em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; }

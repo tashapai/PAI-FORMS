@@ -64,9 +64,6 @@ select.selectpicker {
 	-webkit-box-shadow: 0 0 5px rgba(120, 164, 47, 1);
 	-moz-box-shadow: 0 0 5px rgba(120, 164, 47, 1);
 
-	-webkit-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-
 	transition: all 0.25s ease-in-out;
 	-webkit-transition: all 0.25s ease-in-out;
 	-moz-transition: all 0.25s ease-in-out;

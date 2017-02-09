@@ -2,12 +2,12 @@
 <html>
 <head>
 
-<title>ASI Artpack</title>
+<title>Imperial Artpack</title>
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="assets/css/bootstrap-select.css" type="text/css">
-<link rel="stylesheet" href="assets/css/pai.css" type="text/css">
+<link rel="stylesheet" href="assets/css/imperial.css" type="text/css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -28,8 +28,8 @@
 
 	<section id="container">
 		<header>
-			<span id="logo"><img src="assets/img/logo-pai.png" id="logo" name="logo" alt="PAi Logo"></span>
-			<h1>ASI Artpack</h1>
+			<span id="logo"><img src="assets/img/logo-imperial.png" id="logo" name="logo" alt="Imperial Logo"></span>
+			<h1>Imperial Artpack</h1>
 		</header>
 
 		<form method="post" action="" name="asiartpackForm" id="asiartpackForm" autocomplete="on" class="form-horizontal" role="form">
@@ -62,54 +62,78 @@
 					<label for="csr_name" accesskey="S">CSR Name</label>
 					<div class="col-2">
 						<select id="csr_name" class="selectpicker show-tick form-control" data-live-search="true" multiple data-max-options="1" required="required" />
-                            <option value="Joey Knight">
-                            	    Joey Knight
+                            <option value="Alison Tourville">
+                            	Alison Tourville
                             </option>
-                            <option value="Wren White">
-                            	    Wren White
+							<option value="Ashley Tucker">
+                            	Ashley Tucker
                             </option>
-							<option value="Cari White">
-                            	    Cari White
+                            <option value="Chad Saladin">
+                            	Chad Saladin
                             </option>
-                            <option value="Tiphani Isom">
-                            	    Tiphani Isom
-                            </option>
-                            <option value="Dena Isgrigg">
-									Dena Isgrigg
+                            <option value="Chelsey Hanneken">
+								Chelsey Hanneken
 							</option>
-							<option value="Julie Montgomery">
-                             		Julie Montgomery
-                            </option>
-                            <option value="Sara Hawkins">
-                            	    Sara Hawkins
-                            </option>
-                             <option value="Leeanne Widener">
-									Leeanne Widener
+							<option value="Chris Frame">
+                             	Chris Frame
+                            </option>                            
+                             <option value="Emily Mangles">
+								Emily Mangles
 							</option>
-							<option value="Angel Talbert">
-									Angel Talbert
+							<option value="Evelyn Ortwein">
+								Evelyn Ortwein
 							</option>
-                            <option value="Lori Beste">
-                            		Lori Beste
+                            <option value="Gina Hayes">
+                            	Gina Hayes
                             </option>
-                            <option value="Amber Kitchen">
-                            	    Amber Kitchen
+                            <option value="Joe Pendergrass">
+                            	Joe Pendergrass
                             </option>
-							<option value="Rachel Bolinger">
-									Rachel Bolinger
+							<option value="John Meusch">
+								John Meusch
 							</option>
-                            <option value="Terry Licklider">
-									Terry Licklider
+                            <option value="John Gaster">
+								John Gaster
 							</option>
-                            <option value="Tracy Montgomery">
-                            	    Tracy Montgomery
+                            <option value="Kara Taylor">
+                            	Kara Taylor
                             </option>
-                     	    <option value="Grant Clark">
-                         			Grant Clark
-                      	    </option>
+                       		<option value="Kelly Hohe">
+                         		Kelly Hohe
+                     	    </option>
+							<option value="Kim Latham">
+								Kim Latham
+							</option>
+							<option value="Michelle Rhodes">
+								Michelle Rhodes
+							</option>
+                            <option value="Russ Meyer">
+                             	Russ Meyer
+                            </option>
+                             <option value="Shelley Brown">
+                             	Shelley Brown
+                            </option>
+                            <option value="Shelly Pigg">
+                             	Shelly Pigg
+                            </option>
+                             <option value="Susan Tucker">
+                             	Susan Tucker
+                            </option>
+                             <option value="Terri Thater">
+								Terri Thater
+							</option>
+                            <option value="Trish Brewer">
+								Trish Brewer
+							</option>    
+							<option value="Elizabeth Sherrell">
+								Elizabeth Sherrell
+							</option>
+							<option value="Tammy Whitman">
+								Tammy Whitman
+							</option>
                             <option value="Unassigned">
-									(Unassigned)
-								</option>   
+								(Unassigned)
+							</option>    
 						</select>
 					</div>
 				</div>
@@ -118,7 +142,7 @@
 					<label for="turn_time" accesskey="T">Turn Time</label>
 					<div class="col-2">
 						<select id="turn_time" class="selectpicker show-tick form-control" multiple data-max-options="1" />
-							<option value="2 Business Days" selected>2 Business Days</option>
+							<option value="4 Business Days" selected>4 Business Days</option>
 							<option value="Rush">Rush</option>
 						</select>
 					</div>
@@ -159,31 +183,66 @@
 					<div class="checkarea">
 						<div>
 							<label>
-							<input ng-model="Domestic" type="number">Domestic</label>
+							<input ng-model="Domestic" type="number" value="{{Domestic}}">Domestic</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="Q30" type="number"">Q30</label>
+							<input ng-model="Empire" type="number" value="{{Empire}}">Empire</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="C60" type="number">C60</label>
+							<input ng-model="_10Pack" type="number" value="{{_10Pack}}">10 Pack</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="FullCustom" type="number"">Full Custom</label>
+							<input ng-model="LaserEtching" type="number" value="{{LaserEtching}}">Laser Etching</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="Core24" type="number">Core 24</label>
+							<input ng-model="Apparel" type="number" value="{{Apparel}}">Apparel</label>
 						</div>
 
 						<div>
-							<label style="font-weight:bold"><input type="number" value="{{ Domestic + Q30 + C60 + FullCustom + Core24 }}" readonly disabled>Total Designs</label>
+							<label>
+							<input ng-model="WovenLabel" type="number" value="{{WovenLabel}}">Woven Label</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="Planogram" type="number" value="{{Planogram}}">Planogram</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="One9One6" type="number" value="{{One9One6}}">One9One6</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="ImportKnits" type="number" value="{{ImportKnits}}">Import Knits</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="WLP" type="number" value="{{WLP}}">WLP</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="NamedropPage" type="number" value="{{NamedropPage}}">Namedrop Page</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="ArtforApproval" type="number" value="{{ArtforApproval}}">Art for Approval</label>
+						</div>
+
+						<div>
+							<label style="font-weight:bold"><input type="number" value="{{ Domestic + Empire + _10Pack + LaserEtching + Apparel + WovenLabel + Planogram + One9One6 + ImportKnits + WLP + NamedropPage + ArtforApproval }}" readonly disabled>Total Designs</label>
 						</div>
 					</div>
 				</div>
