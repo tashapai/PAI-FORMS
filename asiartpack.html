@@ -3,27 +3,15 @@
 <head>
 
 <title>ASI Artpack</title>
+
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="assets/css/bootstrap-select.css" type="text/css">
 <link rel="stylesheet" href="assets/css/pai.css" type="text/css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-select.js"></script>
-
-
-<script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-<!-- AJAX Form Submit   <script src="assets/js/jquery.jigowatt.js"></script>   -->
-
-<!--[if IE]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
 </head>
+
 <body>
 
 	<section id="container">
@@ -39,77 +27,93 @@
 				<legend>Account Information</legend>
 
 				<div class="half">
-					<label for="customer_name" accesskey="U">Customer Name<br><small>(optional)</small></label>
+					<label for="customer_name" accesskey="U">
+						Customer Name
+						<br>
+						<small>(optional)</small>
+					</label>
 					<input name="customer_name" type="text" id="customer_name" placeholder="" />
 				</div>
 
 				<div class="half">
-					<label for="rep_name" accesskey="R">Rep Name<br><small>(optional)</small></label>
+					<label for="rep_name" accesskey="R">
+						Rep Name
+						<br>
+						<small>(optional)</small>
+					</label>
 					<input name="rep_name" type="text" id="rep_name" placeholder="" />
 				</div>
 
 				<div class="half">
-					<label for="account_name" accesskey="A">Account Name<br><small>(optional)</small></label>
+					<label for="account_name" accesskey="A">
+						Account Name
+						<br>
+						<small>(optional)</small>
+					</label>
 					<input name="account_name" type="text" id="account_name" placeholder="" />
 				</div>
 
 				<div class="half">
-					<label for="account_num" accesskey="N">Account Number</label>
+					<label for="account_num" accesskey="N">
+						Account Number
+					</label>
 					<input name="account_num" type="text" id="account_num" placeholder="" required="required" />
 				</div>
 
 				<div class="half">
-					<label for="csr_name" accesskey="S">CSR Name</label>
+					<label for="csr_name" accesskey="S">
+						CSR Name
+					</label>
 					<div class="col-2">
 						<select id="csr_name" class="selectpicker show-tick form-control" data-live-search="true" multiple data-max-options="1" required="required" />
                             <option value="Joey Knight">
-                            	    Joey Knight
+                            	Joey Knight
                             </option>
                             <option value="Wren White">
-                            	    Wren White
+                            	Wren White
                             </option>
 							<option value="Cari White">
-                            	    Cari White
+                            	Cari White
                             </option>
                             <option value="Tiphani Isom">
-                            	    Tiphani Isom
+                            	Tiphani Isom
                             </option>
                             <option value="Dena Isgrigg">
-									Dena Isgrigg
+								Dena Isgrigg
 							</option>
 							<option value="Julie Montgomery">
-                             		Julie Montgomery
+                             	Julie Montgomery
                             </option>
                             <option value="Sara Hawkins">
-                            	    Sara Hawkins
+                            	Sara Hawkins
                             </option>
                              <option value="Leeanne Widener">
-									Leeanne Widener
+								Leeanne Widener
 							</option>
 							<option value="Angel Talbert">
-									Angel Talbert
+								Angel Talbert
 							</option>
                             <option value="Lori Beste">
-                            		Lori Beste
+                            	Lori Beste
                             </option>
                             <option value="Amber Kitchen">
-                            	    Amber Kitchen
+                            	Amber Kitchen
                             </option>
 							<option value="Rachel Bolinger">
-									Rachel Bolinger
+								Rachel Bolinger
 							</option>
                             <option value="Terry Licklider">
-									Terry Licklider
+								Terry Licklider
 							</option>
                             <option value="Tracy Montgomery">
-                            	    Tracy Montgomery
+                            	Tracy Montgomery
                             </option>
                      	    <option value="Grant Clark">
-                         			Grant Clark
+                         		Grant Clark
                       	    </option>
                             <option value="Unassigned">
-									(Unassigned)
-								</option>   
+								(Unassigned)
+							</option>   
 						</select>
 					</div>
 				</div>
@@ -131,13 +135,19 @@
 				<legend>Artpack Details</legend>
 
 				<div class="half">
-					<label for="reference_tapes" accesskey="K">Artpack Name </label>
-					<input name="reference_tapes" type="text" id="reference_tapes" placeholder="" required="required" />
+					<label for="artpack_name" accesskey="K">
+						Artpack Name
+					</label>
+					<input name="artpack_name" type="text" id="artpack_name" placeholder="" required="required" />
 				</div>
 
 				<div class="half">
-					<label for="reference_tapes" accesskey="E">Reference Art <br /><small>(optional)</small></label>
-					<input name="reference_tapes" type="text" id="reference_tapes" placeholder="" />
+					<label for="reference_art" accesskey="E">
+						Reference Art
+						<br>
+						<small>(optional)</small>
+					</label>
+					<input name="reference_art" type="text" id="reference_art" placeholder="" />
 				</div>
 
 				<!-- OLD PACKAGE TYPE SELECTOR 
@@ -159,31 +169,36 @@
 					<div class="checkarea">
 						<div>
 							<label>
-							<input ng-model="Domestic" type="number">Domestic</label>
+							<input ng-model="Domestic" type="number" name="package_type[]" id="Domestic">Domestic
+							</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="Q30" type="number"">Q30</label>
+							<input ng-model="Q30" type="number" name="package_type[]" id="Q30">Q30
+							</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="C60" type="number">C60</label>
+							<input ng-model="C60" type="number" name="package_type[]" id="C60">C60
+							</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="FullCustom" type="number"">Full Custom</label>
+							<input ng-model="FullCustom" type="number" name="package_type[]" id="FullCustom">Full Custom
+							</label>
 						</div>
 
 						<div>
 							<label>
-							<input ng-model="Core24" type="number">Core 24</label>
+							<input ng-model="Core24" type="number" name="package_type[]" id="Core24">Core 24
+							</label>
 						</div>
 
 						<div>
-							<label style="font-weight:bold"><input type="number" value="{{ Domestic + Q30 + C60 + FullCustom + Core24 }}" readonly disabled>Total Designs</label>
+							<label style="font-weight:bold"><input type="number" name="package_total" value="{{ Domestic + Q30 + C60 + FullCustom + Core24 }}" readonly disabled>Total Designs</label>
 						</div>
 					</div>
 				</div>
@@ -247,42 +262,22 @@
 
 			</fieldset>
 
-			<input type="submit" class="submit" id="submit" value="Submit" />
+			<input type="submit" class="submit" id="submit" value="Submit" onClick="return checksubmit(this)" />
 
 		</form>
 
 	</section>
 
-	<script>
-	// sort list
-	var my_options = $("#csr_name option");
-	my_options.sort(function(a,b) {
-	    if (a.text > b.text) return 1;
-	    else if (a.text < b.text) return -1;
-	    else return 0
-	})
-	$("#csr_name").empty().append(my_options);
-	// run chosen plugin
-	$("#csr_name").chosen({no_results_text: "No results matched"});
-
-
-	//spinner appearance
-	$(function() {
-        $('.package_type').spinner({
-            min: 0,
-            max: 20
-        });
-    });
-
-
-	//checkbock appearance
-	$('.check').click(function (e) {
-    if ($(e.target).is('input')) {
-        $(this).find('.glyphicon').toggleClass('glyphicon-check glyphicon-unchecked');
-        console.log( $(this).find('input').is(':checked') );
-    }
-	});
-	</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
+<script src="assets/js/csr-asi.js"></script>
+<!-- AJAX Form Submit   <script src="assets/js/jquery.jigowatt.js"></script>   -->
+<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
 
 </body>
