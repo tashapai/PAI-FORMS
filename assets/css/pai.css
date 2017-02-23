@@ -1,7 +1,7 @@
 /* Remove this when pasting into your Stylesheet! */
 
 html, body { border: 0; margin: 0; padding: 0; }
-body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min-width: 100%; min-height: 101%; color: #666; background:#eee; }
+body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min-width: 100%; min-height: 101%; color: #666; background: #eee /* url("../img/bg-pcap.jpg") no-repeat 50% fixed */; background-size:cover;}
 
 
 
