@@ -1,0 +1,3 @@
+#container .half{width:60%;float:left;}
+#container input, #container textarea, #container select { width:65%; }
+#container .col-2 { width:65%; }

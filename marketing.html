@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Marketing Request</title>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="assets/css/bootstrap-select.css" type="text/css">
+<link rel="stylesheet" href="assets/css/pai.css" type="text/css">
+<link rel="stylesheet" href="assets/css/marketing.css" type="text/css">
+
+</head>
+
+<body>
+
+	<section id="container">
+		<header>
+			<span id="logo"><img src="assets/img/logo-pai.png" id="logo" name="logo" alt="PAi Logo"></span>
+			<h1>Marketing Request</h1>
+		</header>
+
+		<form method="post" action="" name="asiartpackForm" id="asiartpackForm" autocomplete="on" class="form-horizontal" role="form">
+
+			<fieldset>
+
+				<legend>Business Cards</legend>
+
+				<div class="half">
+					<label for="layout" accesskey="L">Layout</label>
+					<div class="col-2">
+						<select id="turn_time" class="selectpicker show-tick form-control" multiple data-max-options="1" />
+							<option value="PAI" selected>PAI</option>
+							<option value="ASI">ASI</option>
+							<option value="ADG">ADG</option>
+							<option value="Imperial">Imperial</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="half">
+					<label for="name" accesskey="N">
+						Name
+					</label>
+					<input name="name" type="text" id="name" placeholder="" />
+				</div>
+
+				<div class="half">
+					<label for="title" accesskey="A">
+						Job Title(s)
+					</label>
+					<textarea name="title" type="text" id="title" rows="2" placeholder="" /></textarea>
+				</div>
+
+				<div class="half">
+					<label for="office" accesskey="N">
+						Office Phone
+						<br>
+						<small>Select all that apply</small>
+					</label>
+					<div class="col-2">
+						<select id="office" class="selectpicker show-tick form-control" multiple data-max-options="5" onchange="customSelectCheck(this);"/>
+							<option value="573-732-4411" selected>573-732-4411 (Bourbon PAi)</option>
+							<option value="800-255-4287">800-255-4287 (Bourbon PAi)</option>
+							<option value="866-274-4287">800-274-4287 (Bourbon ASI)</option>
+							<option value="800-950-1916">800-950-1916 (Bourbon Imperial)</option>
+							<option value="CUSTOM" id="customOption">Custom</option>
+						</select>
+					</div>
+				</div>
+
+				<script>
+				function customSelectCheck(customSelect)
+				{
+				    console.log(customSelect);
+				    if(customSelect){
+				        customOptionValue = document.getElementById("customOption").value;
+				        if(customOptionValue == customSelect.value){
+				            document.getElementById("customDivCheck").style.display = "block";
+				        }
+				        else{
+				            document.getElementById("customDivCheck").style.display = "none";
+				        }
+				    }
+				    else{
+				        document.getElementById("customDivCheck").style.display = "block";
+				    }
+				}
+				</script>
+
+				<div class="half" id="customDivCheck" style="display:none;">
+					<label for="customoffice" accesskey="A">
+						<small>Please enter your custom office phone number</small>
+					</label>
+					<input name="customoffice" type="text" id="customoffice" placeholder="" />
+				</div>
+
+				<div class="half">
+					<label for="turn_time" accesskey="T">Turn Time</label>
+					<div class="col-2">
+						<select id="turn_time" class="selectpicker show-tick form-control" multiple data-max-options="1" />
+							<option value="2 Business Days" selected>2 Business Days</option>
+							<option value="Rush">Rush</option>
+						</select>
+					</div>
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+
+				<legend>Artpack Details</legend>
+
+				<div class="half">
+					<label for="artpack_name" accesskey="K">
+						Artpack Name
+					</label>
+					<input name="artpack_name" type="text" id="artpack_name" placeholder="" required="required" />
+				</div>
+
+				<div class="half">
+					<label for="reference_art" accesskey="E">
+						Reference Art
+						<br>
+						<small>(optional)</small>
+					</label>
+					<input name="reference_art" type="text" id="reference_art" placeholder="" />
+				</div>
+
+				<!-- OLD PACKAGE TYPE SELECTOR 
+				<div>
+				<label for="package_type" accesskey="P">Package Type <br><small>(select all that apply)</small></label>
+					<div style="width:588px;float:left;">
+						<select id="package_type" class="selectpicker show-tick form-control" multiple data-max-options="5" required="required" />
+							<option>Domestic</option>
+							<option>Q30</option>
+							<option>C60</option>
+							<option>Full Custom</option>
+							<option>Core 24</option>
+						</select>
+					</div>
+				</div> -->
+
+				<div ng-app>
+					<label for="package_type" accesskey="P">Package Type<br><small>(enter quantity)</small></label>
+					<div class="checkarea">
+						<div>
+							<label>
+							<input ng-model="Domestic" type="number" name="package_type[]" id="Domestic">Domestic
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="Q30" type="number" name="package_type[]" id="Q30">Q30
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="C60" type="number" name="package_type[]" id="C60">C60
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="FullCustom" type="number" name="package_type[]" id="FullCustom">Full Custom
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="Core24" type="number" name="package_type[]" id="Core24">Core 24
+							</label>
+						</div>
+
+						<div>
+							<label style="font-weight:bold"><input type="number" name="package_total" value="{{ Domestic + Q30 + C60 + FullCustom + Core24 }}" readonly disabled>Total Designs</label>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<label for="style_preference" accesskey="Y">Style Preference <br><small>(select all that apply)</small></label>
+					<div class="checkarea">
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="golf_resort"/><span>Golf/Resort</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="corporate"/><span>Corporate</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="camo_outdoor"/><span>Camo/Outdoor</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="extreme"/><span>Extreme</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="performance"/><span>Performance</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="winter_knit"/><span>Winter/Knit</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="distressed"/><span>Distressed</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="trucker"/><span>Trucker</span></label>
+						</div>
+						<div class="checkbox">
+							<label>
+							<input name="style_preference[]" type="checkbox" id="Other"/><span>Other</span></label>
+						</div>
+					</div>
+				</div>
+
+				<div class="half">
+					<label for="logo_manip" accesskey="L" class="toggle-check">Logo Manipulation</label>
+					<div class="checkarea" style="width:auto !important; margin:8px 0;">
+       				   <div>
+				            <input id="logo_manip" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
+				            <label for="logo_manip" data-on="Yes" data-off="No"></label>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<label for="comments" accesskey="C">Comments</label>
+					<textarea name="comments" cols="40" rows="8" id="comments" placeholder="Enter your comments" spellcheck="true" required="required"></textarea>
+				</div>
+
+			</fieldset>
+
+			<input type="submit" class="submit" id="submit" value="Submit" onClick="return checksubmit(this)" />
+
+		</form>
+
+	</section>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
+<script src="assets/js/csr-asi.js"></script>
+<!-- AJAX Form Submit   <script src="assets/js/jquery.jigowatt.js"></script>   -->
+<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+</body>
+</html>
