@@ -99,7 +99,7 @@
 
 							<div>
 								<label>
-								<img src="assets/img/p11c.png"><input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span>
+								<img src="assets/img/p11c.png"><input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span><span class="required">*</span>
 								</label>
 							</div>
 
@@ -147,21 +147,6 @@
 
 
 				<div class="half">
-					<label for="account_name" accesskey="">
-						Account Name
-					</label>
-					<input name="account_name" type="text" id="account_name" placeholder="" required="required" />
-				</div>
-
-				<div class="half">
-					<label for="datepicker" accesskey="">
-					Requested Due
-					</label>
-					<input type="date" id="datepicker">
-				</div>
-
-
-				<div class="half">
 					<label for="background" accesskey="">Background</label>
 					<div class="col-2">
 						<select id="background" class="selectpicker show-tick form-control" multiple data-max-options="1" required="required" />
@@ -191,12 +176,42 @@
 					</div>
 				</div>
 
-				<div>
-					<label for="instructions" accesskey="">Special Instructions</label>
-					<textarea name="instructions" cols="40" rows="8" id="instructions" placeholder="Enter any special instructions" spellcheck="true" required="required"></textarea>
+
+				<div class="half">
+					<label for="datepicker" accesskey="">
+					Requested Due
+					</label>
+					<input type="date" id="datepicker">
+				</div>
+
+				<div class="half">
+					<label for="account_name" accesskey="">
+						Account Name
+					</label>
+					<input name="account_name" type="text" id="account_name" placeholder="" required="required" />
+				</div>
+
+				<div class="half">
+					<label for="instructions" accesskey="" style="display:none;"></label>
+					<textarea name="instructions" cols="40" rows="10" id="instructions" placeholder="Enter any special instructions" spellcheck="true" required="required"></textarea>
+				</div>
+
+				<div id="notes">
+
+					<span class="required">* Please specify details in the special instructions box and send examples if possible.</span>
+
+					<span class="attn">Caps must be labeled with style number and color code or they will not be photographed unless they are for a creative shot.</span>
+
+					<span class="attn">Files will be saved as <b>STYLE-COLOR-VIEW</b> (i.e. <b>I902-JXX-1</b>) If a different naming convention is required, please specify within the Special Instructions box above.</span>
+
+					<span class="attn red"><b>Please plan on a (5) day turnaround time for standard photography orders to be completed.</b><br>
+
+					Date of submission is not included in the 5 day turnaround. Rush orders are available, please contact photography prior to submitting your order.</span>
 				</div>
 
 			</fieldset>
+
+
 
 			<input type="submit" class="submit" id="submit" value="Submit" onClick="return checksubmit(this)" />
 
