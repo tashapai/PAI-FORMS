@@ -33,89 +33,99 @@
 					<input name="item_desc" type="text" id="item_desc" placeholder="" />
 				</div>
 
-				<div class="half">
-					<label for="account_name" accesskey="">
-						Account Name
-					</label>
-					<input name="account_name" type="text" id="account_name" placeholder="" required="required" />
-				</div>
-
-				<div class="half">
-					<label for="datepicker" accesskey="">
-					Requested Due
-					</label>
-					<input type="date" id="datepicker">
-				</div>
-
-				<div ng-app>
+				<div ng-app style="margin-top:10px;">
 					<div class="half">
 						<label for="photo_type" accesskey="">Photo Type<br><small>(check all that apply)</small></label>
 						<div class="checkarea">
 							<div>
 								<label>
-								<input ng-model="Front" type="checkbox" name="photo_type[]" id="Front"><span>1 - Front</span>
+								<img src="assets/img/p01f.png"><input ng-model="Front" type="checkbox" name="photo_type[]" id="Front"><span>1 - Front</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="QuarterLeft" type="checkbox" name="photo_type[]" id="QuarterLeft"><span>2 - Quarter Left</span>
+								<img src="assets/img/p02ql.png"><input ng-model="QuarterLeft" type="checkbox" name="photo_type[]" id="QuarterLeft"><span>2 - Quarter Left</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="QuarterRight" type="checkbox" name="photo_type[]" id="QuarterRight"><span>3 - Quarter Right</span>
+								<img src="assets/img/p03qr.png"><input ng-model="QuarterRight" type="checkbox" name="photo_type[]" id="QuarterRight"><span>3 - Quarter Right</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="Back" type="checkbox" name="photo_type[]" id="Back"><span>4 - Back</span>
+								<img src="assets/img/p04b.png"><input ng-model="Back" type="checkbox" name="photo_type[]" id="Back"><span>4 - Back</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="LeftSide" type="checkbox" name="photo_type[]" id="LeftSide"><span>5 - Left Side</span>
+								<img src="assets/img/p05ls.png"><input ng-model="LeftSide" type="checkbox" name="photo_type[]" id="LeftSide"><span>5 - Left Side</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="RightSide" type="checkbox" name="photo_type[]" id="RightSide"><span>6 - Right Side</span>
+								<img src="assets/img/p06rs.png"><input ng-model="RightSide" type="checkbox" name="photo_type[]" id="RightSide"><span>6 - Right Side</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="FlatFront" type="checkbox" name="photo_type[]" id="FlatFront"><span>7 - Flat Front</span>
+								<img src="assets/img/p07ff.png"><input ng-model="FlatFront" type="checkbox" name="photo_type[]" id="FlatFront"><span>7 - Flat Front</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="FlatBack" type="checkbox" name="photo_type[]" id="FlatBack"><span>8 - Flat Back</span>
+								<img src="assets/img/p08fb.png"><input ng-model="FlatBack" type="checkbox" name="photo_type[]" id="FlatBack"><span>8 - Flat Back</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="Top" type="checkbox" name="photo_type[]" id="Top"><span>9 - Top</span>
+								<img src="assets/img/p09t.png"><input ng-model="Top" type="checkbox" name="photo_type[]" id="Top"><span>9 - Top</span>
 								</label>
 							</div>
 
 							<div>
 								<label>
-								<input ng-model="Inside" type="checkbox" name="photo_type[]" id="Inside"><span>10 -  Inside</span>
+								<img src="assets/img/p10i.png"><input ng-model="Inside" type="checkbox" name="photo_type[]" id="Inside"><span>10 -  Inside</span>
 								</label>
 							</div>						
 
 							<div>
 								<label>
-								<input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span>
+								<img src="assets/img/p11c.png"><input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span>
 								</label>
 							</div>
+
+							<div>
+								<label>
+								<img src="assets/img/p12tf.png"><input ng-model="TFlat" type="checkbox" name="photo_type[]" id="TFlat"><span>12 - Flat</span>
+								</label>
+							</div>				
+
+							<div>
+								<label>
+								<img src="assets/img/p13tff.png"><input ng-model="TFlatFolded" type="checkbox" name="photo_type[]" id="TFlatFolded"><span>13 - Flat Folded</span>
+								</label>
+							</div>	
+
+							<div>
+								<label>
+								<img src="assets/img/p14ts.png"><input ng-model="TSleeve" type="checkbox" name="photo_type[]" id="TSleee"><span>14 - Sleeve</span>
+								</label>
+							</div>	
+
+							<div>
+								<label>
+								<img src="assets/img/p15tm.png"><input ng-model="TMannequin" type="checkbox" name="photo_type[]" id="TFlatFolded"><span>15 - Mannequin</span>
+								</label>
+							</div>								
 
 						</div>
 					</div>
@@ -134,6 +144,22 @@
 						</div>
 					</div>
 				</div>
+
+
+				<div class="half">
+					<label for="account_name" accesskey="">
+						Account Name
+					</label>
+					<input name="account_name" type="text" id="account_name" placeholder="" required="required" />
+				</div>
+
+				<div class="half">
+					<label for="datepicker" accesskey="">
+					Requested Due
+					</label>
+					<input type="date" id="datepicker">
+				</div>
+
 
 				<div class="half">
 					<label for="background" accesskey="">Background</label>
