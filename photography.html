@@ -25,6 +25,13 @@
 			<fieldset>
 
 				<legend>Artpack Details</legend>
+				
+				<div>
+					<label for="item_desc" accesskey="">
+						Item Description
+					</label>
+					<input name="item_desc" type="text" id="item_desc" placeholder="" />
+				</div>
 
 				<div class="half">
 					<label for="account_name" accesskey="">
@@ -40,101 +47,92 @@
 					<input type="date" id="datepicker">
 				</div>
 
-				<div>
-					<label for="item_desc" accesskey="">
-						Item Description
-					</label>
-					<input name="item_desc" type="text" id="item_desc" placeholder="" />
-				</div>
-
 				<div ng-app>
-				<div class="half">
-					<label for="photo_type" accesskey="">Photo Type<br><small>(check all that apply)</small></label>
-					<div class="checkarea">
-						<div>
-							<label>
-							<input ng-model="Front" type="checkbox" name="photo_type[]" id="Front"><span>1 - Front</span>
-							</label>
+					<div class="half">
+						<label for="photo_type" accesskey="">Photo Type<br><small>(check all that apply)</small></label>
+						<div class="checkarea">
+							<div>
+								<label>
+								<input ng-model="Front" type="checkbox" name="photo_type[]" id="Front"><span>1 - Front</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="QuarterLeft" type="checkbox" name="photo_type[]" id="QuarterLeft"><span>2 - Quarter Left</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="QuarterRight" type="checkbox" name="photo_type[]" id="QuarterRight"><span>3 - Quarter Right</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="Back" type="checkbox" name="photo_type[]" id="Back"><span>4 - Back</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="LeftSide" type="checkbox" name="photo_type[]" id="LeftSide"><span>5 - Left Side</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="RightSide" type="checkbox" name="photo_type[]" id="RightSide"><span>6 - Right Side</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="FlatFront" type="checkbox" name="photo_type[]" id="FlatFront"><span>7 - Flat Front</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="FlatBack" type="checkbox" name="photo_type[]" id="FlatBack"><span>8 - Flat Back</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="Top" type="checkbox" name="photo_type[]" id="Top"><span>9 - Top</span>
+								</label>
+							</div>
+
+							<div>
+								<label>
+								<input ng-model="Inside" type="checkbox" name="photo_type[]" id="Inside"><span>10 -  Inside</span>
+								</label>
+							</div>						
+
+							<div>
+								<label>
+								<input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span>
+								</label>
+							</div>
+
 						</div>
-
-						<div>
-							<label>
-							<input ng-model="QuarterLeft" type="checkbox" name="photo_type[]" id="QuarterLeft"><span>2 - Quarter Left</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="QuarterRight" type="checkbox" name="photo_type[]" id="QuarterRight"><span>3 - Quarter Right</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="Back" type="checkbox" name="photo_type[]" id="Back"><span>4 - Back</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="LeftSide" type="checkbox" name="photo_type[]" id="LeftSide"><span>5 - Left Side</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="RightSide" type="checkbox" name="photo_type[]" id="RightSide"><span>6 - Right Side</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="FlatFront" type="checkbox" name="photo_type[]" id="FlatFront"><span>7 - Flat Front</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="FlatBack" type="checkbox" name="photo_type[]" id="FlatBack"><span>8 - Flat Back</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="Top" type="checkbox" name="photo_type[]" id="Top"><span>9 - Top</span>
-							</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="Inside" type="checkbox" name="photo_type[]" id="Inside"><span>10 -  Inside</span>
-							</label>
-						</div>						
-
-						<div>
-							<label>
-							<input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span>
-							</label>
-						</div>
-
-					</div>
 					</div>
 					<div class="half">
-					<label for="pieces" accesskey="">Total Shots</label>
-					<div class="checkarea">
-						<div>
-							<label>
-							<input ng-model="numberOfPieces" type="number" name="pieces[]" id="numberOfPieces"><span>Number of Pieces</span>
-							</label>
-						</div>
+						<label for="pieces" accesskey="">Total Shots</label>
+						<div class="checkarea">
+							<div>
+								<label>
+								<input ng-model="numberOfPieces" type="number" name="pieces[]" id="numberOfPieces"><span>Number of Pieces</span>
+								</label>
+							</div>
 
-						<div>
-							<label style="font-weight:bold"><input type="number" name="photo_total" value="{{ 0 + (Front + QuarterLeft + QuarterRight + Back + LeftSide + RightSide + FlatFront + FlatBack + Top + Inside + Creative) * numberOfPieces }}" readonly disabled>Total Shots</label>
+							<div>
+								<label style="font-weight:bold"><input type="number" name="photo_total" value="{{ 0 + (Front + QuarterLeft + QuarterRight + Back + LeftSide + RightSide + FlatFront + FlatBack + Top + Inside + Creative) * numberOfPieces }}" readonly disabled>Total Shots</label>
+							</div>
 						</div>
 					</div>
-
-
-				</div>
 				</div>
 
 				<div class="half">
