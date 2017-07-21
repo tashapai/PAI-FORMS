@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Photography Request</title>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="assets/css/bootstrap-select.css" type="text/css">
+<link rel="stylesheet" href="assets/css/photo.css" type="text/css">
+
+</head>
+
+<body>
+
+	<section id="container">
+		<header>
+			<span id="logo"><img src="assets/img/logo-pai.png" id="logo" name="logo" alt="PAi Logo"></span>
+			<h1>Photography Request</h1>
+		</header>
+
+		<form method="post" action="" name="photographyForm" id="photographyForm" autocomplete="on" class="form-horizontal" role="form">
+
+			<fieldset>
+
+				<legend>Artpack Details</legend>
+
+				<div class="half">
+					<label for="account_name" accesskey="">
+						Account Name
+					</label>
+					<input name="account_name" type="text" id="account_name" placeholder="" required="required" />
+				</div>
+
+				<div class="half">
+					<label for="datepicker" accesskey="">
+					Requested Due
+					</label>
+					<input type="date" id="datepicker">
+				</div>
+
+				<div>
+					<label for="item_desc" accesskey="">
+						Item Description
+					</label>
+					<input name="item_desc" type="text" id="item_desc" placeholder="" />
+				</div>
+
+				<div ng-app>
+				<div class="half">
+					<label for="photo_type" accesskey="">Photo Type<br><small>(check all that apply)</small></label>
+					<div class="checkarea">
+						<div>
+							<label>
+							<input ng-model="Front" type="checkbox" name="photo_type[]" id="Front"><span>1 - Front</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="QuarterLeft" type="checkbox" name="photo_type[]" id="QuarterLeft"><span>2 - Quarter Left</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="QuarterRight" type="checkbox" name="photo_type[]" id="QuarterRight"><span>3 - Quarter Right</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="Back" type="checkbox" name="photo_type[]" id="Back"><span>4 - Back</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="LeftSide" type="checkbox" name="photo_type[]" id="LeftSide"><span>5 - Left Side</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="RightSide" type="checkbox" name="photo_type[]" id="RightSide"><span>6 - Right Side</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="FlatFront" type="checkbox" name="photo_type[]" id="FlatFront"><span>7 - Flat Front</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="FlatBack" type="checkbox" name="photo_type[]" id="FlatBack"><span>8 - Flat Back</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="Top" type="checkbox" name="photo_type[]" id="Top"><span>9 - Top</span>
+							</label>
+						</div>
+
+						<div>
+							<label>
+							<input ng-model="Inside" type="checkbox" name="photo_type[]" id="Inside"><span>10 -  Inside</span>
+							</label>
+						</div>						
+
+						<div>
+							<label>
+							<input ng-model="Creative" type="checkbox" name="photo_type[]" id="Creative"><span>11 - Creative</span>
+							</label>
+						</div>
+
+					</div>
+					</div>
+					<div class="half">
+					<label for="pieces" accesskey="">Total Shots</label>
+					<div class="checkarea">
+						<div>
+							<label>
+							<input ng-model="numberOfPieces" type="number" name="pieces[]" id="numberOfPieces"><span>Number of Pieces</span>
+							</label>
+						</div>
+
+						<div>
+							<label style="font-weight:bold"><input type="number" name="photo_total" value="{{ 0 + (Front + QuarterLeft + QuarterRight + Back + LeftSide + RightSide + FlatFront + FlatBack + Top + Inside + Creative) * numberOfPieces }}" readonly disabled>Total Shots</label>
+						</div>
+					</div>
+
+
+				</div>
+				</div>
+
+				<div class="half">
+					<label for="background" accesskey="">Background</label>
+					<div class="col-2">
+						<select id="background" class="selectpicker show-tick form-control" multiple data-max-options="1" required="required" />
+							<option value="White">White (Clipped)</option>
+							<option value="Original">Original (Not Clipped)</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="half">
+					<label for="dropshadow" accesskey="">Drop Shadow</label>
+					<div class="col-2">
+						<select id="dropshadow" class="selectpicker show-tick form-control" multiple data-max-options="1" required="required" />
+							<option value="No">No</option>
+							<option value="Yes">Yes</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="half">
+					<label for="newOrReplacement" accesskey="">New or Replacement</label>
+					<div class="col-2">
+						<select id="newOrReplacement" class="selectpicker show-tick form-control" multiple data-max-options="1" required="required" />
+							<option value="New">New</option>
+							<option value="Replacement">Replacement</option>
+						</select>
+					</div>
+				</div>
+
+				<div>
+					<label for="instructions" accesskey="">Special Instructions</label>
+					<textarea name="instructions" cols="40" rows="8" id="instructions" placeholder="Enter any special instructions" spellcheck="true" required="required"></textarea>
+				</div>
+
+			</fieldset>
+
+			<input type="submit" class="submit" id="submit" value="Submit" onClick="return checksubmit(this)" />
+
+		</form>
+
+	</section>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
+<script src="assets/js/csr-asi.js"></script>
+<!-- AJAX Form Submit   <script src="assets/js/jquery.jigowatt.js"></script>   -->
+<!--[if IE]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+</body>
+</html>
