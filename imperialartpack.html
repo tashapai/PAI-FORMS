@@ -25,16 +25,6 @@
 				<legend>Account Information</legend>
 
 				<div class="half">
-					<label for="customer_name" accesskey="U">Customer Name<br><small>(optional)</small></label>
-					<input name="customer_name" type="text" id="customer_name" placeholder="" />
-				</div>
-
-				<div class="half">
-					<label for="rep_name" accesskey="R">Rep Name<br><small>(optional)</small></label>
-					<input name="rep_name" type="text" id="rep_name" placeholder="" />
-				</div>
-
-				<div class="half">
 					<label for="account_name" accesskey="A">Account Name<br><small>(optional)</small></label>
 					<input name="account_name" type="text" id="account_name" placeholder="" />
 				</div>
@@ -137,23 +127,9 @@
 				</div>
 
 				<div class="half">
-					<label for="reference_tapes" accesskey="E">Reference Art <br /><small>(optional)</small></label>
-					<input name="reference_tapes" type="text" id="reference_tapes" placeholder="" />
+					<label for="reference_tapes" accesskey="E">Reference Art <br /></label>
+					<input name="reference_tapes" type="text" id="reference_tapes" placeholder="" required="required" />
 				</div>
-
-				<!-- OLD PACKAGE TYPE SELECTOR 
-				<div>
-				<label for="package_type" accesskey="P">Package Type <br><small>(select all that apply)</small></label>
-					<div style="width:588px;float:left;">
-						<select id="package_type" class="selectpicker show-tick form-control" multiple data-max-options="5" required="required" />
-							<option>Domestic</option>
-							<option>Q30</option>
-							<option>C60</option>
-							<option>Full Custom</option>
-							<option>Core 24</option>
-						</select>
-					</div>
-				</div> -->
 
 				<div ng-app>
 					<label for="package_type" accesskey="P">Package Type<br><small>(enter quantity)</small></label>
@@ -175,17 +151,7 @@
 
 						<div>
 							<label>
-							<input ng-model="LaserEtching" type="number" value="{{LaserEtching}}">Laser Etching</label>
-						</div>
-
-						<div>
-							<label>
 							<input ng-model="Apparel" type="number" value="{{Apparel}}">Apparel</label>
-						</div>
-
-						<div>
-							<label>
-							<input ng-model="WovenLabel" type="number" value="{{WovenLabel}}">Woven Label</label>
 						</div>
 
 						<div>
@@ -215,11 +181,11 @@
 
 						<div>
 							<label>
-							<input ng-model="ArtforApproval" type="number" value="{{ArtforApproval}}">Art for Approval</label>
-						</div>
+							<input ng-model="Blankets" type="number" value="{{Blankets}}">Blankets</label>
+						</div>						
 
 						<div>
-							<label style="font-weight:bold"><input type="number" value="{{ Domestic + Empire + _10Pack + LaserEtching + Apparel + WovenLabel + Planogram + One9One6 + ImportKnits + WLP + NamedropPage + ArtforApproval }}" readonly disabled>Total Designs</label>
+							<label style="font-weight:bold"><input type="number" value="{{ Domestic + Empire + _10Pack + Apparel + WovenLabel + Planogram + One9One6 + ImportKnits + WLP + NamedropPage + Blankets }}" readonly disabled>Total Designs</label>
 						</div>
 					</div>
 				</div>
@@ -229,19 +195,15 @@
 					<div class="checkarea">
 						<div class="checkbox">
 							<label>
-							<input name="style_preference[]" type="checkbox" id="golf_resort"/><span>Golf/Resort</span></label>
+							<input name="style_preference[]" type="checkbox" id="resort"/><span>Resort</span></label>
 						</div>
 						<div class="checkbox">
 							<label>
-							<input name="style_preference[]" type="checkbox" id="corporate"/><span>Corporate</span></label>
+							<input name="style_preference[]" type="checkbox" id="conservative"/><span>Conservative</span></label>
 						</div>
 						<div class="checkbox">
 							<label>
-							<input name="style_preference[]" type="checkbox" id="camo_outdoor"/><span>Camo/Outdoor</span></label>
-						</div>
-						<div class="checkbox">
-							<label>
-							<input name="style_preference[]" type="checkbox" id="extreme"/><span>Extreme</span></label>
+							<input name="style_preference[]" type="checkbox" id="outdoor"/><span>Outdoor</span></label>
 						</div>
 						<div class="checkbox">
 							<label>
@@ -253,11 +215,11 @@
 						</div>
 						<div class="checkbox">
 							<label>
-							<input name="style_preference[]" type="checkbox" id="distressed"/><span>Distressed</span></label>
+							<input name="style_preference[]" type="checkbox" id="trendy"/><span>Trendy</span></label>
 						</div>
 						<div class="checkbox">
 							<label>
-							<input name="style_preference[]" type="checkbox" id="trucker"/><span>Trucker</span></label>
+							<input name="style_preference[]" type="checkbox" id="fashion"/><span>Fashion</span></label>
 						</div>
 						<div class="checkbox">
 							<label>

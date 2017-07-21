@@ -21,6 +21,10 @@ body { font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; min
   float:left;
 }
 
+.checkarea label img {
+  width:40px;float:left;margin:-3px 8px 0 0;
+}
+
 #container {
 	display: block;
 	width: 860px;
@@ -320,10 +324,11 @@ input[type=number]::-webkit-inner-spin-button {
 acronym { border-bottom:1px dotted #ccc; }
 
 
-#container div.ng-scope div div label {height:auto;clear:none;padding: 15px 0 0 0;width:189px;}
+#container div.ng-scope div div label {height:auto;clear:none;padding: 7px 0 7px 0;width:189px;}
 #container div.ng-scope div div input[readonly]{background:#f6f6f6;font-weight:bolder;}
 #container div.ng-scope label input{margin:-12px 12px 0 0;text-align:center;}
-#container div.ng-scope div.checkarea {margin: 0 0 10px 0;}
+#container div.ng-scope div.checkarea {margin: 0 0 0 0;}
+#container div.ng-scope div.checkarea2 {float:left;display:inline;}
 
 
 /* ============================================================
