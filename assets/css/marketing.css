@@ -1,3 +1,6 @@
 #container .half{width:60%;float:left;}
 #container input, #container textarea, #container select { width:65%; }
-#container .col-2 { width:65%; }
+#container .col-2 { width:65%;float:left;}
+#extNumber {width:100%!important;}
+#container .halfOffice{width:40%;}
+#container .halfExt{width:10%;float:left;}

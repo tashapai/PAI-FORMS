@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Marketing Request</title>
@@ -16,6 +17,7 @@
 <body>
 
 	<section id="container">
+
 		<header>
 			<span id="logo"><img src="assets/img/logo-pai.png" id="logo" name="logo" alt="PAi Logo"></span>
 			<h1>Marketing Request</h1>
@@ -28,7 +30,7 @@
 				<legend>Business Cards</legend>
 
 				<div class="half">
-					<label for="layout" accesskey="L">Layout</label>
+					<label for="layout">Layout</label>
 					<div class="col-2">
 						<select id="turn_time" class="selectpicker show-tick form-control" multiple data-max-options="1" />
 							<option value="PAI" selected>PAI</option>
@@ -40,28 +42,44 @@
 				</div>
 
 				<div class="half">
-					<label for="name" accesskey="N">
+					<label for="name">
 						Name
 					</label>
-					<input name="name" type="text" id="name" placeholder="" />
+					<input name="name" type="text" id="name" placeholder="" required="required" />
 				</div>
 
 				<div class="half">
-					<label for="title" accesskey="A">
+					<label for="title">
 						Job Title(s)
 					</label>
-					<textarea name="title" type="text" id="title" rows="2" placeholder="" /></textarea>
+					<textarea name="title" type="text" id="title" rows="2" placeholder="" required="required" /></textarea>
 				</div>
 
 				<div class="half">
-					<label for="office" accesskey="N">
+					<label for="emailAddress">
+						Email
+					</label>
+					<input name="emailAddress" type="email" id="emailAddress" placeholder="" required="required" />
+				</div>
+
+				<div class="half">
+					<label for="directNumber">
+						Direct Line
+						<br>
+						<small>(optional)</small>
+					</label>
+					<input name="directNumber" type="text" id="directNumber" />
+				</div>
+
+				<div class="halfOffice">
+					<label for="officeNumber">
 						Office Phone
 						<br>
-						<small>Select all that apply</small>
+						<small>(select all that apply)</small>
 					</label>
 					<div class="col-2">
-						<select id="office" class="selectpicker show-tick form-control" multiple data-max-options="5" onchange="customSelectCheck(this);"/>
-							<option value="573-732-4411" selected>573-732-4411 (Bourbon PAi)</option>
+						<select id="officeNumber" class="selectpicker show-tick form-control" multiple data-max-options="5" onchange="customSelectCheck(this);"/>
+							<option value="573-732-4411">573-732-4411 (Bourbon PAi)</option>
 							<option value="800-255-4287">800-255-4287 (Bourbon PAi)</option>
 							<option value="866-274-4287">800-274-4287 (Bourbon ASI)</option>
 							<option value="800-950-1916">800-950-1916 (Bourbon Imperial)</option>
@@ -89,22 +107,25 @@
 				}
 				</script>
 
+				<div class="halfExt">
+					<input name="extNumber" type="text" id="extNumber" placeholder="Ext" />
+				</div>
+
 				<div class="half" id="customDivCheck" style="display:none;">
-					<label for="customoffice" accesskey="A">
+					<label for="customOffice">
 						<small>Please enter your custom office phone number</small>
 					</label>
-					<input name="customoffice" type="text" id="customoffice" placeholder="" />
+					<input name="customOffice" type="text" id="customOffice" placeholder="" />
 				</div>
 
 				<div class="half">
-					<label for="turn_time" accesskey="T">Turn Time</label>
-					<div class="col-2">
-						<select id="turn_time" class="selectpicker show-tick form-control" multiple data-max-options="1" />
-							<option value="2 Business Days" selected>2 Business Days</option>
-							<option value="Rush">Rush</option>
-						</select>
-					</div>
+					<label for="faxNumber">
+						Fax
+					</label>
+					<input name="faxNumber" type="text" id="faxNumber" />
 				</div>
+
+
 
 			</fieldset>
 
